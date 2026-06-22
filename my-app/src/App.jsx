@@ -6,11 +6,13 @@ import {
 } from "react-router-dom";
 import MainLayouts from "../Layouts/MainLayouts";
 import { LoginPage } from "../Pages/LoginPage";
+import SignUpPage from "../Pages/SignUpPage";
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayouts />}>
         <Route index element={<LoginPage />} />
+        <Route path="signup" element={<SignUpPage />} />
       </Route>,
     ),
   );
