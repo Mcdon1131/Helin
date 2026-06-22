@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-nunito: "Nunito", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply bg-white w-full h-dvh;
+  }
+  .input-div {
+    @apply px-2 mb-2 rounded-xl drop-shadow-2xl border;
+  }
+}
+
+@layer base {
+  input {
+    @apply w-full py-3 focus:border-0 active:border-0;
+  }
+}
+
+.card-shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: var(--font-nunito);
+}
+
+.react-international-phone-input,
+.react-international-phone-country-selector-button {
+  border: none !important;
+  outline: none !important;
+}
