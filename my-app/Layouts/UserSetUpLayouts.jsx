@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import UserSetUpNavbar from "../src/components/UserSetUpNavbar";
-const UserSetUpLayouts = () => {
+const UserSetUpLayouts = ({pageNum}) => {
   return (
     <div>
-      <UserSetUpNavbar />
+      <UserSetUpNavbar pgNum={pageNum}/>
       <Outlet />
     </div>
   );

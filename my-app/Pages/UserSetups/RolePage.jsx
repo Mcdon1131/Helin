@@ -1,15 +1,18 @@
 import { useState } from "react";
-
+import creator from "../../src/assets/creator.webp";
+import merchant from "../../src/assets/merchant.webp";
 import RoleCard from "../../src/components/RoleCard";
 import { Link } from "react-router-dom";
-function RolePage() {
+function RolePage({setPageNum}) {
+  const id = 1;
+  setPageNum(id)
   const [selected, setSelected] = useState("");
 
   const roles = [
     {
       title: "Creator",
 
-      image: "../../src/assets/creator.webp",
+      image: creator,
 
       description:
         "Earn up to 20% commission by recommending products to your audience.",
@@ -18,7 +21,7 @@ function RolePage() {
     {
       title: "Merchant",
 
-      image: "../../src/assets/merchant.webp",
+      image: merchant,
 
       description:
         "Get your products in front of the right audience through creators.",
@@ -28,7 +31,7 @@ function RolePage() {
   return (
     <div className="min-h-screen flex justify-center items-center bg-white">
       <div className="w-full max-w-sm px-6 ">
-        <h2 className="text-center text-3xl font-semibold">Select your role</h2>
+        <h2 className="text-center text-4xl font-semibold">Select your role</h2>
         <div className="flex flex-col space-y-5 mt-15">
           {roles.map((role) => (
             <RoleCard
@@ -40,8 +43,8 @@ function RolePage() {
           ))}
         </div>
         <Link
-          className={`flex items-center justify-center w-full px-10 py-3 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.3)] bg-[#25D366] mt-19 text-white`}
-          to=""
+          className={`flex items-center justify-center w-full px-10 py-3 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.3)] bg-[#00ce1b] mt-19 text-white`}
+          to="/setup/storefront"
         >
           {" "}
           Continue
