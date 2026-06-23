@@ -24,8 +24,9 @@ export const Login = () => {
             <div className="mb-10 px-2 ">
               <Link>Forgotten Password ?</Link>
             </div>
+            <Button name="Login" bgColor="rgb(0, 206, 27)" />
             <Button name="Continue with Google" icon={"googleIcon"} />
-            <Button name="Next" bgColor="rgb(0, 206, 27)" />
+
             <p className="text-center font-semibold font-nunito">
               Don't have an account?{" "}
               <span className="">
