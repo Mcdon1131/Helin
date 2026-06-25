@@ -3,9 +3,8 @@ import creator from "../../src/assets/creator.webp";
 import merchant from "../../src/assets/merchant.webp";
 import RoleCard from "../../src/components/RoleCard";
 import { Link } from "react-router-dom";
-function RolePage({setPageNum}) {
-  const id = 1;
-  setPageNum(id)
+function RolePage() {
+
   const [selected, setSelected] = useState("");
 
   const roles = [
@@ -29,9 +28,9 @@ function RolePage({setPageNum}) {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-white">
+    <div className="min-h-screen flex justify-center mt-15 bg-white">
       <div className="w-full max-w-sm px-6 ">
-        <h2 className="text-center text-4xl font-semibold">Select your role</h2>
+        <h2 className="text-center text-3xl font-semibold">Select your role</h2>
         <div className="flex flex-col space-y-5 mt-15">
           {roles.map((role) => (
             <RoleCard

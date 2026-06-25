@@ -1,8 +1,7 @@
 import Button from "../../src/components/Button";
 
-const StoreFrontPage = ({ setPageNum }) => {
-  const id = 2;
-  setPageNum(id);
+const StoreFrontPage = () => {
+
   let Niches = [
     { id: 1, name: "Fitness" },
     { id: 2, name: "Fashion" },
@@ -14,9 +13,9 @@ const StoreFrontPage = ({ setPageNum }) => {
     { id: 8, name: "Food" },
   ];
   return (
-    <div className="flex justify-center items-center bg-white pt-40">
+    <div className="flex justify-center items-center bg-white mt-10">
       <div className="w-full max-w-sm px-6 pt-5 ">
-        <h1 className="text-center font-semibold text-4xl mb-7">
+        <h1 className="text-center font-semibold text-3xl mb-7">
           Setup your StoreFront
         </h1>
         <label htmlFor="username">Choose your username</label>
@@ -41,7 +40,7 @@ const StoreFrontPage = ({ setPageNum }) => {
           <h2 className="mb-2">Choose your Niche</h2>
           <div className="flex flex-wrap gap-4 br px-px pt-2 pb-1">
             {Niches.map((niche) => (
-              <div className="border flex items-center justify-center px-2 py-px border-gray-300 rounded-xl">
+              <div key={niche.id} className="border flex items-center justify-center px-2 py-px border-gray-300 rounded-xl">
                 <p>{niche.name}</p>
               </div>
             ))}

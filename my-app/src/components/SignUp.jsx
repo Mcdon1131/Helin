@@ -27,7 +27,7 @@ const SignUp = () => {
             />
             <Button name="Continue with Google" icon={"googleIcon"} />
             <Button name="Next" to="/setup/role" bgColor="rgb(0, 206, 27)" />
-            <p className="text-center font-semibold font-nunito">
+            <p className="text-center font-lighter font-nunito">
               Already have an account?{" "}
               <span className="">
                 <Link className="text-green-400 font-bold font-nunito" to="/">

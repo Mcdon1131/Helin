@@ -22,6 +22,7 @@ const RoleCard = ({ title, description, image, selected, onClick }) => {
           className={`
             inline-flex
             items-center
+            
             justify-center
             w-5
             aspect-square
