@@ -10,7 +10,7 @@ const UserSetUpLayouts = () => {
   console.log(location)
   const pageNum = pageMap[location.pathname] || 1;
    return (
-    <div>
+    <div className="p-[24px]">
       <UserSetUpNavbar pgNum={pageNum}/>
       <Outlet />
     </div>

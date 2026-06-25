@@ -3,6 +3,7 @@
 @theme {
   --font-nunito: "Nunito", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+  --font-geist: "Geist", sans-serif;
 }
 
 @layer components {
@@ -33,4 +34,8 @@
 .react-international-phone-country-selector-button {
   border: none !important;
   outline: none !important;
+}
+
+*{
+  font-family: "Geist";
 }

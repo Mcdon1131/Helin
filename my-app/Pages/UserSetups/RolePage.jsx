@@ -28,8 +28,8 @@ function RolePage() {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center mt-15 bg-white">
-      <div className="w-full max-w-sm px-6 ">
+    <div className="min-h-screen flex justify-center mt-[24px] bg-white">
+      <div className="w-full max-w-sm">
         <h2 className="text-center text-3xl font-semibold">Select your role</h2>
         <div className="flex flex-col space-y-5 mt-15">
           {roles.map((role) => (

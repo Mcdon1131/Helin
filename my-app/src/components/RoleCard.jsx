@@ -52,7 +52,7 @@ const RoleCard = ({ title, description, image, selected, onClick }) => {
           />
         </div>
 
-        <div className="flex flex-1 flex-col gap-1">
+        <div className="flex flex-1 flex-col ">
           <h2 className="text-2xl font-semibold">{title}</h2>
 
           <p className="text-sm font-medium">{description}</p>

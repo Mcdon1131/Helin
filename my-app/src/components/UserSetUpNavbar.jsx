@@ -3,13 +3,13 @@ const UserSetUpNavbar = ({ pgNum = 1 }) => {
  
   return (
     <div>
-      <div className="w-full py-3 z-100 flex flex-col items-center ">
-        <h1 className="text-xl mt-5 font-semibold text-gray-600">Hulion</h1>
-        <div className="mt-2">
-          <p className="w-full text-sm text-center mb-3 text-gray-400">
+      <div className="text-center w-full pt-4 ">
+        <h1 className="text-sm font-geist tracking-wide font-semibold text-gray-400">Hulion</h1>
+        <div className="mt-2 flex flex-col items-center">
+          <span className="font-medium text-[10px] text-gray-400">
             {pgNum} of 3
-          </p>
-          <div className=" w-40 h-1.5 relative overflow-hidden rounded-xl bg-gray-100">
+          </span>
+          <div className=" w-25 h-1 mt-2 relative overflow-hidden rounded-full bg-gray-100">
             <span
               style={{
                 width: `${currentPercent}%`,
