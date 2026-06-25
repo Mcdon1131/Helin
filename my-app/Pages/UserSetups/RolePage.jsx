@@ -28,7 +28,7 @@ function RolePage() {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center mt-[24px] bg-white">
+    <div className="min-h-screen max-w-130 mx-auto flex flex-cols justify-center mt-[24px] bg-white gap-[20px]">
       <div className="w-full max-w-sm">
         <h2 className="text-center text-3xl font-semibold">Select your role</h2>
         <div className="flex flex-col space-y-5 mt-15">
@@ -41,13 +41,13 @@ function RolePage() {
             />
           ))}
         </div>
-        <Link
-          className={`flex items-center justify-center w-full px-10 py-3 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.3)] bg-[#00ce1b] mt-19 text-white`}
+        <div className="justi"><Link
+          className={`flex bg-[#25D366] mt-[20px] items-center justify-center w-full px-10 py-3 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.3)] bg-[#00ce1b] mt-19 text-white`}
           to="/setup/storefront"
         >
           {" "}
           Continue
-        </Link>
+        </Link></div>
       </div>
     </div>
   );
