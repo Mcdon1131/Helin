@@ -4,7 +4,6 @@ import merchant from "../../src/assets/merchant.webp";
 import RoleCard from "../../src/components/RoleCard";
 import { Link } from "react-router-dom";
 function RolePage() {
-
   const [selected, setSelected] = useState("");
 
   const roles = [
@@ -28,26 +27,37 @@ function RolePage() {
   ];
 
   return (
-    <div className="min-h-screen max-w-130 mx-auto flex flex-cols justify-center mt-[24px] bg-white gap-[20px]">
-      <div className="w-full max-w-sm">
-        <h2 className="text-center text-3xl font-semibold">Select your role</h2>
-        <div className="flex flex-col space-y-5 mt-15">
-          {roles.map((role) => (
-            <RoleCard
-              key={role.title}
-              {...role}
-              selected={selected === role.title}
-              onClick={() => setSelected(role.title)}
-            />
-          ))}
+    <div className="min-h-screen border max-w-130 mx-auto flex flex-cols justify-between mt-6 bg-white gap-5">
+      <div className="flex-1 flex flex-col justify-between gap-5 mt-6">
+        <div className="w-full max-w-sm">
+          <h2 className="text-center text-3xl font-semibold">
+            Select your role
+          </h2>
+          <div className="flex flex-col justify-between space-y-5 mt-15">
+            {roles.map((role) => (
+              <RoleCard
+                key={role.title}
+                {...role}
+                selected={selected === role.title}
+                onClick={() => setSelected(role.title)}
+              />
+            ))}
+          </div>
         </div>
-        <div className="justi"><Link
-          className={`flex bg-[#25D366] mt-[20px] items-center justify-center w-full px-10 py-3 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.3)] bg-[#00ce1b] mt-19 text-white`}
-          to="/setup/storefront"
+        <div
+          style={{
+            margin: "10px auto",
+          }}
+          className="border"
         >
-          {" "}
-          Continue
-        </Link></div>
+          <Link
+            className={`flex bg-[#25D366] mt-5 items-center justify-center w-full px-10 py-3 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.3)] text-white`}
+            to="/setup/storefront"
+          >
+            {" "}
+            Continue
+          </Link>
+        </div>
       </div>
     </div>
   );
