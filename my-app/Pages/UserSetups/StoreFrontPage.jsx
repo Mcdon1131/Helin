@@ -1,24 +1,38 @@
-import Button from "../../src/components/Button";
-
+//import Button from "../../src/components/Button";
+import {
+  Dumbbell,
+  Shirt,
+  Sparkles,
+  Scissors,
+  Heart,
+  Leaf,
+  ScanFace,
+  Utensils,
+} from "lucide-react";
 const StoreFrontPage = () => {
-
   let Niches = [
-    { id: 1, name: "Fitness" },
-    { id: 2, name: "Fashion" },
-    { id: 3, name: "Beauty" },
-    { id: 4, name: "Grooming" },
-    { id: 5, name: "Lifestyle" },
-    { id: 6, name: "Wellness" },
-    { id: 7, name: "Skincare" },
-    { id: 8, name: "Food" },
+    {
+      id: 1,
+      name: "Fitness",
+      icon: Dumbbell,
+    },
+    { id: 2, name: "Fashion", icon: Shirt },
+    { id: 3, name: "Beauty", icon: Sparkles },
+    { id: 4, name: "Grooming", icon: Scissors },
+    { id: 5, name: "Lifestyle", icon: Heart },
+    { id: 6, name: "Wellness", icon: Leaf },
+    { id: 7, name: "Skincare", icon: ScanFace },
+    { id: 8, name: "Food", icon: Utensils },
   ];
   return (
-    <div className="flex justify-center items-center bg-white mt-10">
-      <div className="w-full max-w-sm px-6 pt-5 ">
-        <h1 className="text-center font-semibold text-3xl mb-7">
-          Setup your StoreFront
+    <div className="flex-1 flex flex-col justify-between gap-5 mt-6 ">
+      <div className="flex flex-col justify-center text-black">
+        <h1 className="text-center font-semibold text-3xl">
+          Setup your Storefront
         </h1>
-        <label htmlFor="username">Choose your username</label>
+        <label className="mt-10" htmlFor="username">
+          Choose your username
+        </label>
         <div className="mt-3">
           <div className="relative w-full h-14 transition-colors">
             <input
@@ -32,44 +46,32 @@ const StoreFrontPage = () => {
               @
             </span>
           </div>
-          <div className="mt-1">
-            <small>This becomes your public store link</small>
-          </div>
         </div>
-        <div className="mt-5">
-          <h2 className="mb-2">Choose your Niche</h2>
-          <div className="flex flex-wrap gap-4 br px-px pt-2 pb-1">
-            {Niches.map((niche) => (
-              <div key={niche.id} className="border flex items-center justify-center px-2 py-px border-gray-300 rounded-xl">
-                <p>{niche.name}</p>
-              </div>
-            ))}
-          </div>
-          <small className="px-px ">
-            Select up to three niches to find the right product
-          </small>
+        <p className="mt-1 ml-1 font-medium text-[9px]">
+          This becomes your public store link
+        </p>
+        <h3 className="mt-5">Choose your niche</h3>
+        <div className="flex flex-wrap gap-3 mt-2">
+          {Niches.map((niche) => {
+            const Icon = niche.icon;
+            return (
+              <button className="flex  items-center border border-gray-300 bg-white rounded-full text-xs py-2 px-1.5 shadow-sm ">
+                <Icon className="h-3 aspect-square" />
+                <span>{niche.name}</span>
+              </button>
+            );
+          })}
         </div>
-
-        <div className="mt-3 h-34">
-          <label htmlFor="bio">Short Bio</label>
-          <div className="relative w-full h-14 transition-colors mt-2">
-            <input
-              type="text"
-              id="bio"
-              className="outline-none"
-              className="peer w-full h-25 placeholder:text-black px-12 border border-gray-300 rounded-xl card-shadow focus:outline-none focus:border-green-500"
-            />
-            <span className="absolute right-2 top-19 flex items-center text-black pointer-events-none">
-              <small> 120 - 150 characters</small>
-            </span>
-          </div>
-        </div>
-        <div className="mt-10">
-          <Button bgColor="#00ce1b" to="/setup/freetrial" name="Continue" />
-        </div>
+        <p className="mt-2 ml-1 font-medium text-[9px]">
+          Select up to three niches to find the right product
+        </p>
+      </div>{" "}
+      <div className="w-full pb-15 text-white font-semibold">
+        lorem ipsum dolor sit amet
       </div>
     </div>
   );
 };
 
 export default StoreFrontPage;
+/**/

@@ -27,8 +27,8 @@ function RolePage() {
   ];
 
   return (
-    <div className="min-h-screen border max-w-130 mx-auto flex flex-cols justify-between mt-6 bg-white gap-5">
-      <div className="flex-1 flex flex-col justify-between gap-5 mt-6">
+    <div className=" h-[83vh] max-w-130 mx-auto flex flex-cols justify-between mt-6 bg-white ">
+      <div className="flex-1 flex flex-col justify-between gap-5 ">
         <div className="w-full max-w-sm">
           <h2 className="text-center text-3xl font-semibold">
             Select your role
@@ -44,14 +44,9 @@ function RolePage() {
             ))}
           </div>
         </div>
-        <div
-          style={{
-            margin: "10px auto",
-          }}
-          className="border"
-        >
+        <div className=" w-full pb-13 ">
           <Link
-            className={`flex bg-[#25D366] mt-5 items-center justify-center w-full px-10 py-3 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.3)] text-white`}
+            className={`flex bg-[#25D366] mt-5 font-bold items-center justify-center w-full px-10 py-4 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.2)] text-white`}
             to="/setup/storefront"
           >
             {" "}
