@@ -1,4 +1,4 @@
-//import Button from "../../src/components/Button";
+import { useNavigate } from "react-router-dom";
 import {
   Dumbbell,
   Shirt,
@@ -11,7 +11,9 @@ import {
   CirclePlus,
 } from "lucide-react";
 import { useState } from "react";
+
 const StoreFrontPage = () => {
+  const navigate = useNavigate();
   let Niches = [
     {
       id: 1,
@@ -105,7 +107,10 @@ const StoreFrontPage = () => {
         </div>
       </div>{" "}
       <div className="w-full pb-15 text-white font-semibold">
-        <button class="w-full py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors">
+        <button
+          onClick={() => navigate("/setup/freetrial")}
+          class="w-full py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
+        >
           Continue
         </button>
       </div>
