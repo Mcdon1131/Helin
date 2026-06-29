@@ -2,10 +2,10 @@ import { useState } from "react";
 import creator from "../../src/assets/creator.webp";
 import merchant from "../../src/assets/merchant.webp";
 import RoleCard from "../../src/components/RoleCard";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function RolePage() {
   const [selected, setSelected] = useState("");
-
+  const navigate = useNavigate();
   const roles = [
     {
       title: "Creator",
@@ -45,13 +45,12 @@ function RolePage() {
           </div>
         </div>
         <div className=" w-full pb-13 ">
-          <Link
-            className={`flex bg-[#25D366] mt-5 font-bold items-center justify-center w-full px-10 py-4 rounded-4xl shadow-[0_4px_4px_rgba(0,0,0,0.2)] text-white`}
-            to="/setup/storefront"
+          <button
+            onClick={() => navigate("/setup/storefront")}
+            class="w-full text-white py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
           >
-            {" "}
             Continue
-          </Link>
+          </button>
         </div>
       </div>
     </div>

@@ -65,9 +65,27 @@ const StoreFrontPage = () => {
         <p className="mt-2 ml-1 font-medium text-[9px]">
           Select up to three niches to find the right product
         </p>
+        <h3 className="mt-5">Short Bio</h3>
+        <div className="mt-3 relative h-24">
+          <label
+            htmlFor=""
+            className="absolute h-full w-full flex items-center pointer-events-none"
+          >
+            <span className="absolute bottom-2 right-3 text-xs text-black/70">
+              150 characters
+            </span>
+          </label>
+          <textarea
+            className="rounded-xl resize-none h-full w-full p-2 border border-gray-300 focus:outline-none focus:border-[#25D366]"
+            name=""
+            id=""
+          ></textarea>
+        </div>
       </div>{" "}
       <div className="w-full pb-15 text-white font-semibold">
-        lorem ipsum dolor sit amet
+        <button class="w-full py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors">
+          Continue
+        </button>
       </div>
     </div>
   );
