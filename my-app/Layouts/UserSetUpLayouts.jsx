@@ -10,7 +10,7 @@ const UserSetUpLayouts = () => {
   console.log(location);
   const pageNum = pageMap[location.pathname] || 1;
   return (
-    <div className="min-h-screen w-full flex flex-col justify-between p-6 bg-white max-w-130 mx-auto font-sans">
+    <div className="min-h-screen w-full flex flex-col  p-6 bg-white max-w-130 mx-auto font-sans">
       <UserSetUpNavbar pgNum={pageNum} />
       <Outlet />
     </div>

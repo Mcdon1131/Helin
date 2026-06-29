@@ -34,7 +34,7 @@ const StoreFrontPage = () => {
           Choose your username
         </label>
         <div className="mt-3">
-          <div className="relative w-full h-14 transition-colors">
+          <div className="relative w-full h-13 transition-colors">
             <input
               type="text"
               id="username"
