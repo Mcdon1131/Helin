@@ -33,7 +33,6 @@ const StoreFrontPage = () => {
       if (prev.includes(id)) {
         return prev.filter((item) => item !== id);
       }
-
       return [...prev, id];
     });
   };
