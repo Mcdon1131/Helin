@@ -8,7 +8,9 @@ import {
   Leaf,
   ScanFace,
   Utensils,
+  CirclePlus,
 } from "lucide-react";
+import { useState } from "react";
 const StoreFrontPage = () => {
   let Niches = [
     {
@@ -23,7 +25,18 @@ const StoreFrontPage = () => {
     { id: 6, name: "Wellness", icon: Leaf },
     { id: 7, name: "Skincare", icon: ScanFace },
     { id: 8, name: "Food", icon: Utensils },
+    { id: 9, name: "Add", icon: CirclePlus },
   ];
+  const [selectedNiches, setSelectedNiches] = useState([]);
+  const toggleNiche = (id) => {
+    setSelectedNiches((prev) => {
+      if (prev.includes(id)) {
+        return prev.filter((item) => item !== id);
+      }
+
+      return [...prev, id];
+    });
+  };
   return (
     <div className="flex-1 flex flex-col justify-between gap-5 mt-6 ">
       <div className="flex flex-col justify-center text-black">
@@ -54,8 +67,18 @@ const StoreFrontPage = () => {
         <div className="flex flex-wrap gap-3 mt-2">
           {Niches.map((niche) => {
             const Icon = niche.icon;
+            const clicked = selectedNiches.includes(niche.id);
             return (
-              <button className="flex  items-center border border-gray-300 bg-white rounded-full text-xs py-2 px-1.5 shadow-sm ">
+              <button
+                style={{
+                  color: clicked ? `white` : "black",
+                  backgroundColor: clicked ? "#25D366" : "white",
+                }}
+                onClick={() => {
+                  toggleNiche(niche.id);
+                }}
+                className="flex justify-center items-center border border-gray-300 bg-white rounded-full text-xs py-1.5 pr-2 shadow-sm "
+              >
                 <Icon className="h-3 aspect-square" />
                 <span>{niche.name}</span>
               </button>
@@ -72,7 +95,7 @@ const StoreFrontPage = () => {
             className="absolute h-full w-full flex items-center pointer-events-none"
           >
             <span className="absolute bottom-2 right-3 text-xs text-black/70">
-              150 characters
+              120 - 150 characters
             </span>
           </label>
           <textarea
