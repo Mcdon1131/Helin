@@ -53,7 +53,10 @@ const FreeTrialPage = () => {
               </h2>
               <h2 className="text-sm mt-2 font-bold line-through text-black/50">
                 $468
-                <span className="text-[10px] font-medium text-black/50">
+                <span
+                  style={{ textDecoration: "none" }}
+                  className="text-[10px] font-medium text-black/50"
+                >
                   /yr
                 </span>
               </h2>
