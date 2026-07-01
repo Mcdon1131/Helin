@@ -81,14 +81,71 @@ const FreeTrialPage = () => {
             </div>
           </button>
         </div>
-        <div className="p-4 pb-5 mt-5 border border-gray-300 rounded-xl shadow-md "></div>
+        <div className="p-4 pb-5 mt-5 border border-gray-300 rounded-xl shadow-md ">
+          <h3 className="font-bold ">Payment Details</h3>
+          <p className="mt-5 mb-1 text-xs uppercase">card NUMBER</p>
+          <div className="relative h-8">
+            <label className="absolute h-full pl-5 flex items-center text-black/60 text-sm pointer-events-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-credit-card w-4 aspect-square stroke-current"
+                aria-hidden="true"
+              >
+                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                <line x1="2" x2="22" y1="10" y2="10"></line>
+              </svg>
+              <span class="ml-5">0000 0000 0000 0000</span>
+            </label>
+            <input
+              class="w-full h-full pl-13 border shadow-md border-gray-300 rounded transition-colors focus:outline-none focus:border-[#25D366]"
+              id="creator"
+              type="text"
+              name="role"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-1">
+            <div className="px-2 pb-2">
+              <label htmlFor="expry">Expiry</label>
+              <input
+                type="text"
+                placeholder="MM/YY"
+                className="border w-full shadow-md h-10 pl-2 border-gray-300 placeholder: focus:outline-none focus:border-[#25D366]"
+                id="expry"
+              />
+            </div>
+            <div className="px-2 pb-2">
+              <label htmlFor="cvc">CVC</label>
+              <input
+                type="text"
+                placeholder="123"
+                className="border w-full shadow-md h-10 pl-2 border-gray-300 placeholder: focus:outline-none focus:border-[#25D366]"
+                id="cvc"
+              />
+            </div>
+          </div>
+        </div>
       </div>{" "}
       <div className="w-full pb-15 text-white font-semibold">
-        <button
+         <button
           onClick={() => navigate("/setup/role")}
           class="w-full py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
         >
-          Continue
+          Start free trial
+        </button>
+        <p className="text-black/50 text-center m-0 p-0 text-xs mt-1">No charge today. Cancel anytime</p>
+        <button
+          onClick={() => navigate("/setup/role")}
+          class="w-full py-4 mt-2 bg-[#000000] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
+        >
+          Skip for now
         </button>
       </div>
     </div>

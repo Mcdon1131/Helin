@@ -44,10 +44,10 @@ function RolePage() {
             ))}
           </div>
         </div>
-        <div className=" w-full pb-13 ">
+        <div className="w-full pb-12.5 text-white font-semibold">
           <button
             onClick={() => navigate("/setup/storefront")}
-            class="w-full text-white py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
+            class="w-full py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
           >
             Continue
           </button>
