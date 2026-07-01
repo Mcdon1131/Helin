@@ -81,11 +81,14 @@ const FreeTrialPage = () => {
             </div>
           </button>
         </div>
-        <div className="p-4 pb-5 mt-5 border border-gray-300 rounded-xl shadow-md ">
-          <h3 className="font-bold ">Payment Details</h3>
-          <p className="mt-5 mb-1 text-xs uppercase">card NUMBER</p>
-          <div className="relative h-8">
-            <label className="absolute h-full pl-5 flex items-center text-black/60 text-sm pointer-events-none">
+        <div class="p-4 pb-5 mt-5 border border-gray-300 rounded-xl shadow-md">
+          <h3 class="font-bold">Payment Details</h3>
+          <p class="mt-5 mb-1 text-xs uppercase">Card number</p>
+          <div class="relative h-8">
+            <label
+              for=""
+              class="absolute h-full pl-5 flex items-center text-black/60 text-sm pointer-events-none"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -111,39 +114,57 @@ const FreeTrialPage = () => {
               name="role"
             />
           </div>
-          <div className="grid grid-cols-2 gap-1">
-            <div className="">
-              <p className="mt-3 mb-1 text-xs uppercase" htmlFor="expry">Expiry</p>
-              <input
-                type="text"
-                placeholder="MM/YY"
-                className="border w-full shadow-md h-8 pl-5 border-gray-300 placeholder:text-xs focus:outline-none focus:border-[#25D366]"
-                id="expry"
-              />
+          <div class="grid grid-cols-2 gap-5 justify-between">
+            <div class="">
+              <p class="mt-3 mb-1 text-xs uppercase">Expiry</p>
+              <div class="relative h-8 text-xs">
+                <label
+                  for=""
+                  class="absolute w-full inset-0 flex text-black/60 items-center pointer-events-none"
+                >
+                  <span class="ml-5">MM/YY</span>
+                </label>
+                <input
+                  class="w-full h-full pl-5 border shadow-md border-gray-300 rounded transition-colors focus:outline-none focus:border-[#25D366]"
+                  id="creator"
+                  type="text"
+                  name="role"
+                />
+              </div>
             </div>
-            <div className="px-2 pb-2">
-              <p className="mt-3 mb-1 text-xs uppercase" htmlFor="cvc">CVC</p>
-              <input
-                type="text"
-                placeholder="123"
-                className="border w-full shadow-md h-8 pl-5 border-gray-300 placeholder:text-xs focus:outline-none focus:border-[#25D366]"
-                id="cvc"
-              />
+            <div class="relative">
+              <p class="mt-3 mb-1 text-xs uppercase">CVC</p>
+              <div class="relative h-8 text-xs">
+                <label
+                  for=""
+                  class="absolute w-full inset-0 flex text-black/60 items-center pointer-events-none"
+                >
+                  <span class="ml-5">123</span>
+                </label>
+                <input
+                  class="w-full h-full pl-5 border shadow-md border-gray-300 rounded transition-colors focus:outline-none focus:border-[#25D366]"
+                  id="creator"
+                  type="text"
+                  name="role"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>{" "}
       <div className="w-full pb-15 text-white font-semibold">
-         <button
+        <button
           onClick={() => navigate("/setup/role")}
           class="w-full py-4 mt-5 bg-[#25D366] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
         >
           Start free trial
         </button>
-        <p className="text-black/50 text-center m-0 p-0 text-xs mt-1">No charge today. Cancel anytime</p>
+        <p className="text-black/50 text-center m-0 p-0 text-xs mt-1">
+          No charge today. Cancel anytime
+        </p>
         <button
           onClick={() => navigate("/setup/role")}
-          class="w-full py-4 mt-2 bg-[#000000] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
+          class="w-full py-4 mt-5 bg-[#000000] shadow-lg rounded-full hover:bg-emerald-600 transition-colors"
         >
           Skip for now
         </button>
