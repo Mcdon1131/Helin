@@ -112,21 +112,21 @@ const FreeTrialPage = () => {
             />
           </div>
           <div className="grid grid-cols-2 gap-1">
-            <div className="px-2 pb-2">
-              <label htmlFor="expry">Expiry</label>
+            <div className="">
+              <p className="mt-3 mb-1 text-xs uppercase" htmlFor="expry">Expiry</p>
               <input
                 type="text"
                 placeholder="MM/YY"
-                className="border w-full shadow-md h-10 pl-2 border-gray-300 placeholder: focus:outline-none focus:border-[#25D366]"
+                className="border w-full shadow-md h-8 pl-5 border-gray-300 placeholder:text-xs focus:outline-none focus:border-[#25D366]"
                 id="expry"
               />
             </div>
             <div className="px-2 pb-2">
-              <label htmlFor="cvc">CVC</label>
+              <p className="mt-3 mb-1 text-xs uppercase" htmlFor="cvc">CVC</p>
               <input
                 type="text"
                 placeholder="123"
-                className="border w-full shadow-md h-10 pl-2 border-gray-300 placeholder: focus:outline-none focus:border-[#25D366]"
+                className="border w-full shadow-md h-8 pl-5 border-gray-300 placeholder:text-xs focus:outline-none focus:border-[#25D366]"
                 id="cvc"
               />
             </div>
